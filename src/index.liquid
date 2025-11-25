@@ -1,14 +1,17 @@
 ---
-title: dishes
+title: Dishes
 layout: layout.njk
 ---
 <ul>
   {%- for post in collections.post -%}
     <li>
+      {% if post.url%}
       <a href="{{ post.url }}">
         {{ post.data.title }}
-        <img width="50" src="{{ post.url }}image.png" alt="title">
       </a>
+    {% else %}
+        {{ post.data.title }}
+    {% endif %}
     </li>
   {%- endfor -%}
 </ul>

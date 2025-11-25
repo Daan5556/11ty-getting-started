@@ -11,4 +11,8 @@ export default async function (eleventyConfig) {
   });
 
   eleventyConfig.addPlugin(eleventyImageTransformPlugin);
+
+  eleventyConfig.addGlobalData("eleventyComputed", {
+    permalink: (data) => (data.draft ? false : data.permalink),
+  });
 }
