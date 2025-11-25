@@ -1,11 +1,15 @@
 ---
 title: My Rad Blog
 ---
+{% set css %} {% include "style.css" %} {% endset %}
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    {{ css | cssmin | safe }}
+    </style>
     <title>{{ title }}</title>
   </head>
   <body>
