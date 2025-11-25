@@ -1,7 +1,8 @@
 ---
 title: Dishes
-layout: layout.njk
+layout: layout.liquid
 ---
+{% include "dish-stats.liquid" %}
 <ul>
   {%- for post in collections.post -%}
     <li>

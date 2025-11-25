@@ -1,0 +1,4 @@
+{% assign total = collections.post | size %}
+{% assign published = collections.post | reject: "data.draft", true | size %}
+
+Cooked {{ published }}/{{ total }} of countries

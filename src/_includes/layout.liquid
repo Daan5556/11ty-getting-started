@@ -1,19 +1,18 @@
 ---
 title: Dishes
 ---
-{% set css %} {% include "style.css" %} {% endset %}
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-    {{ css | cssmin | safe }}
+      {% include "style.css" %}
     </style>
     <title>{{ title }}</title>
   </head>
   <body>
     <h1 align="center">Dishes</h1>
-    {{ content | safe }}
+    {{ content }}
   </body>
 </html>

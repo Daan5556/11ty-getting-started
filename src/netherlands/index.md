@@ -1,5 +1,5 @@
 ---
-layout: dish-layout.njk
+layout: dish-layout.liquid
 tags: post
 title: Stampot
 country: Netherlands
